@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 302px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #001;
+}
+html {
+  box-sizing: border-box;
+}
+
+.global-elementor {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.logo {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  transition: all 500ms ease-in-out;
+}
+.logo img {
+  height: 60px;
+  transition: all 500ms ease-in-out;
+}
+
+.logo img:hover {
+  transform: rotate(180deg);
+  filter: blur(2px);
+}
+
+/* ********************************************************** */
+.container {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+}
+
+.container h1 {
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+  line-height: 1.5;
+}
+
+.container h3 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.progress-bar {
+  width: 260px;
+  height: 12px;
+  border-radius: 1.5px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+.progress-bar::before {
+  content: "0%";
+  font-size: 10px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+}
+.progress-bar::after {
+  content: "100%";
+  font-size: 10px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+}
+.progress-bar span {
+  display: block;
+  height: 12px;
+  width: 0%;
+  border-radius: 1.5px;
+  background-color: #7e90df;
+  animation: fill 2s ease-in-out 1 forwards;
+}
+@keyframes fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%;
+  }
+}
+.vx-1 p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+.links {
+  height: 50px;
+  width: 300px;
+  margin: auto;
+}
+
+.links a {
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: #7e90df;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity, transform 200ms ease-in-out;
+}
+.links a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ************************************** Medium screen **************************** */
+
+@media (min-width: 500px) {
+  .logo {
+    left: 10px;
+    top: 20px;
+  }
+  .logo img {
+    height: 80px;
+  }
+
+  .container h1 {
+    margin: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+    line-height: 1.5;
+  }
+}
+
+/* ******** dextop ******************************************************************** */
+
+@media (min-width: 1200px) {
+  .logo {
+    left: 30px;
+    top: 30px;
+  }
+  .container {
+    width: 100%;
+    max-width: 50%;
+    margin-top: 40px;
+    height: 400px;
+    text-align: center;
+  }
+
+  .container h1 {
+    margin: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 75px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+    line-height: 1.5;
+  }
+  .container h3 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
+  .progress-bar {
+    width: 360px;
+    height: 12px;
+    border-radius: 1.5px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+  }
+  .progress-bar::before {
+    content: "0%";
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+  }
+  .progress-bar::after {
+    content: "100%";
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+  }
+  .progress-bar span {
+    display: block;
+    height: 12px;
+    width: 0%;
+    border-radius: 1.5px;
+    background-color: #7e90df;
+    animation: fill 2s ease-in-out 1 forwards;
+  }
+  @keyframes fill {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 75%;
+    }
+  }
+
+  .vx-1 p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+  }
+
+  .links {
+    height: 50px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .links a {
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: #7e90df;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity, transform 200ms ease-in-out;
+  }
+  .links a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
